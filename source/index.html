@@ -3,13 +3,148 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>asdfsdf</title>
+  <title>Hezzl task</title>
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;1,300&display=swap"
+        rel="stylesheet">
   <link href="css/style.min.css" rel="stylesheet">
 </head>
-<body>
-<h1>Hello world</h1>
+<body class="page">
+<main class="wrapper">
+  <div class="content">
+    <div class="scroll-wrapper">
+      <ul class="tabs content__tabs scroll-wrapper__inner">
+        <li class="tabs__item tabs__item_active"><a href="#">Основное</a></li>
+        <li class="tabs__item"><a href="#">Информация о награде</a></li>
+        <li class="tabs__item"><a href="#">Условия получения</a></li>
+        <li class="tabs__item"><a href="#">Поощрения</a></li>
+        <li class="tabs__item"><a href="#">Стилизация</a></li>
+        <li class="tabs__item"><a href="#">Технические настройки</a></li>
+      </ul>
+    </div>
+    <div class="main">
+      <div class="main__puzzle puzzle">
+        <div class="puzzle__item"></div>
+        <div class="puzzle__item puzzle__item_pink">
+          <i class="icon-puzzle-default"></i>
+        </div>
+        <div class="puzzle__item puzzle__item_blue">
+          <i class="icon-puzzle-default"></i>
+        </div>
+        <div class="puzzle__item puzzle__item_orange">
+          <i class="icon-puzzle-default"></i>
+        </div>
+        <div class="puzzle__item puzzle__item_green">
+          <i class="icon-puzzle-default"></i>
+        </div>
+        <div class="puzzle__item puzzle__item_pink">
+          <i class="icon-puzzle-default"></i>
+        </div>
+        <div class="puzzle__item puzzle__item_blue">
+          <i class="icon-puzzle-default"></i>
+        </div>
+        <div class="puzzle__item puzzle__item_orange">
+          <i class="icon-puzzle-default"></i>
+        </div>
+        <div class="puzzle__item puzzle__item_green">
+          <i class="icon-puzzle-default"></i>
+        </div>
+      </div>
+      <form class="form">
+        <div class="custom-select custom-select_dark form__select">
+          <select name="type" class="custom-select__select">
+            <option value="puzzle1" selected>Пазл</option>
+            <option value="puzzle2">Пазл</option>
+          </select>
+        </div>
+
+        <div class="form__group">
+          <span class="form__group-title">Название</span>
+          <label class="form__group-item control control_dark-label">
+            <span>Ru</span>
+            <input class="input input_right-radius" name="ru-name" type="text" placeholder="Имя">
+          </label>
+          <label class="form__group-item control control_dark-label">
+            <span>En</span>
+            <input class="input input_right-radius" name="en-name" type="text" placeholder="Name">
+          </label>
+        </div>
+
+        <div class="form__group img-group">
+          <span class="form__group-title">Картинка пазла</span>
+          <div class="img-group__box">
+            <div class="img-group__image-box">
+              <i class="img-group__image icon-images-default"></i>
+            </div>
+            <div>
+              <input type="file" id="upload-file" class="visually-hidden" name="filename">
+              <label for="upload-file" class="img-group__input-label">Загрузить</label>
+              <p class="img-group__text">
+                или <a href="#" class="img-group__link">Выбрать&nbsp;из&nbsp;коллекции</a>
+                разрешение 550*550
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="form__group config-group">
+          <span class="form__group-title">Сколько деталей у пазла</span>
+          <div class="config-group__box">
+            <label class="config-group__label control">
+              <span>по Горизонтали</span>
+              <input class="input input_dark input_right-radius" name="horizontal" type="number" value="3">
+            </label>
+            <label class="config-group__label control">
+              <span>по Вертикали</span>
+              <input class="input input_dark input_right-radius" name="vertical" type="number" value="3">
+            </label>
+          </div>
+        </div>
+
+        <div class="form__group base-group">
+          <span class="base-group__label">Может ли награда выдавать купоны</span>
+          <div class="custom-select">
+            <select name="coupon" class="custom-select__select">
+              <option value="yes" selected>Да</option>
+              <option value="no">Нет</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form__group base-group">
+          <span class="base-group__label">Сообщение при получении награды</span>
+          <input name="reward-message" type="text" class="input input_both-radius" placeholder="Введите значение">
+        </div>
+
+        <div class="form__group limit-group">
+          <span class="form__group-title">Сколько раз может получить один игрок награду</span>
+
+          <label class="form__group-item control control_right-radius">
+            <input name="reward-limit" type="number" class="input input_left-radius input_dark" value="1">
+            <span>Раз</span>
+          </label>
+
+          <div class="limit-group__box form__group-item">
+            <label class="control">
+              <span>Тайм-аут</span>
+              <input name="reward-timeout" type="number" class="input input_dark" value="1800">
+            </label>
+            <div class="custom-select custom-select_dark limit-group__select">
+              <select name="timeout-units" class="custom-select__select">
+                <option value="sec">Секунд</option>
+                <option value="min">Минут</option>
+                <option value="hour">Часов</option>
+                <option value="day" selected>Дней</option>
+                <option value="week">Недель</option>
+                <option value="month">Месяцев</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</main>
 
 </body>
 </html>

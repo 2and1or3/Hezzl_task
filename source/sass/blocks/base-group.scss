@@ -1,0 +1,8 @@
+.base-group {
+  display: flex;
+
+  &__label {
+    max-width: 130px;
+    margin-right: 25px;
+  }
+}

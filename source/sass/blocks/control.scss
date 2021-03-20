@@ -1,0 +1,27 @@
+.control {
+  display: flex;
+  box-sizing: border-box;
+  flex-grow: 1;
+
+  span {
+    flex-shrink: 0;
+    padding: 10px;
+    text-align: center;
+    background-color: $grey-2;
+    color: $grey-3-opacity;
+
+    @include with-left-radius;
+  }
+}
+
+.control_dark-label {
+  span {
+    color: $grey-3;
+  }
+}
+
+.control_right-radius {
+  span {
+    @include with-right-radius;
+  }
+}

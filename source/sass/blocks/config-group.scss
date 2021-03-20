@@ -1,0 +1,40 @@
+.config-group {
+  &__box {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__label {
+    width: 100%;
+    margin-bottom: 10px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    span {
+      min-width: 140px;
+    }
+  }
+}
+
+@media (min-width: 525px) {
+  .config-group {
+    &__label {
+      width: 50%;
+      margin: 0;
+
+      &:first-child input {
+        border-radius: 0;
+      }
+
+      &:last-child span {
+        border-radius: 0;
+      }
+
+      span {
+        min-width: auto;
+      }
+    }
+  }
+}

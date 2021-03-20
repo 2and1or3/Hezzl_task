@@ -1,5 +1,5 @@
 body {
-  min-width: 320px;
+  min-width: $mobile-width;
   margin: 0;
 
   font-style: normal;
@@ -30,4 +30,13 @@ img {
   border: 0;
 
   clip: rect(0 0 0 0);
+}
+
+.page {
+  background-color: $grey-4;
+}
+
+.wrapper {
+  margin: 0 auto;
+  padding: 50px;
 }

@@ -1,0 +1,30 @@
+.input {
+  flex-grow: 1;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 2px solid $grey-2;
+  width: 70px;
+  font-weight: inherit;
+  color: $grey-3;
+
+  &::placeholder {
+    color: $grey-1;
+  }
+}
+
+.input_dark {
+  color: $grey-3-opacity;
+  background-color: $grey-2;
+}
+
+.input_left-radius {
+  @include with-left-radius;
+}
+
+.input_right-radius {
+  @include with-right-radius;
+}
+
+.input_both-radius {
+  @include with-both-radius;
+}

@@ -1,0 +1,10 @@
+.content {
+  border: 2px solid $grey-2;
+  background-color: #ffffff;
+  border-radius: 5px;
+  padding: 20px 40px;
+
+  &__tabs {
+    margin-bottom: 20px;
+  }
+}

@@ -1,0 +1,7 @@
+.scroll-wrapper {
+  overflow: hidden;
+
+  &__inner {
+    overflow: auto;
+  }
+}

@@ -1,0 +1,48 @@
+.custom-select {
+  position: relative;
+  flex-grow: 1;
+
+  &::after {
+    /* stylelint-disable-next-line font-family-no-missing-generic-family-keyword */
+    font-family: "icons" !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    content: "\e900";
+    position: absolute;
+    color: $grey-3;
+    top: 50%;
+    right: 10px;
+    transform: translate(0, -50%);
+    font-size: 24px;
+  }
+
+  &__select {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 30px 10px 10px;
+    border-radius: 5px;
+    border: 2px solid $grey-2;
+    background-color: #ffffff;
+    appearance: none;
+    font-weight: inherit;
+  }
+}
+
+.custom-select_dark {
+  select {
+    background-color: $grey-2;
+    color: $grey-3-opacity;
+  }
+
+  &::after {
+    color: $grey-3-opacity;
+  }
+}

@@ -35,9 +35,9 @@ task("css", function () {
     .pipe(server.stream());
 });
 
-task("images", function () {
-  return src("source/img/*.{jpg,png,webp,svg}")
-    .pipe(dest("build/img"));
+task("fonts", function () {
+  return src("source/fonts/*.{eot,svg,ttf,woff,woff2}")
+    .pipe(dest("build/fonts"));
 });
 
 task("server", function () {
@@ -57,7 +57,7 @@ task("build", series(
   "clean",
   "html",
   "css",
-  "images",
+  "fonts",
 ));
 
 task("start", series("build", "server"));

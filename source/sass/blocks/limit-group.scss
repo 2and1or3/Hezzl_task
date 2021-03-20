@@ -1,0 +1,13 @@
+.limit-group {
+  &__box {
+    display: flex;
+  }
+
+  &__select {
+    flex-grow: 0;
+
+    select {
+      @include with-right-radius;
+    }
+  }
+}

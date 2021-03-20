@@ -1,0 +1,11 @@
+@mixin with-left-radius {
+  border-radius: 5px 0 0 5px;
+}
+
+@mixin with-right-radius {
+  border-radius: 0 5px 5px 0;
+}
+
+@mixin with-both-radius {
+  border-radius: 5px;
+}

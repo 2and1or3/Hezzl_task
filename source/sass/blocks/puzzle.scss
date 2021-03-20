@@ -1,0 +1,57 @@
+.puzzle {
+  width: 350px;
+  height: 350px;
+  border-radius: 20px;
+  background-color: $green-2;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  box-shadow: 0 0 30px -15px $grey-1;
+  flex-shrink: 0;
+
+  &__item {
+    width: 116px;
+    height: 116px;
+    border: 1px solid #ffffff;
+    box-sizing: border-box;
+    color: #ffffff;
+    display: flex;
+
+    &:nth-child(1) {
+      border-radius: 20px 0 0 0;
+    }
+
+    &:nth-child(3) {
+      border-radius: 0 20px 0 0;
+    }
+
+    &:nth-child(7) {
+      border-radius: 0 0 0 20px;
+    }
+
+    &:nth-child(9) {
+      border-radius: 0 0 20px 0;
+    }
+
+    &_pink {
+      background-color: $pink-1;
+    }
+
+    &_blue {
+      background-color: $blue-1;
+    }
+
+    &_orange {
+      background-color: $orange-1;
+    }
+
+    &_green {
+      background-color: $green-1;
+    }
+  }
+
+  &__item i {
+    font-size: 35px;
+    margin: auto;
+  }
+}
